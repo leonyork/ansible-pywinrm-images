@@ -1,0 +1,8 @@
+ARG ANSIBLE_DOCKERHUB_VERSION
+FROM leonyork/ansible:${ANSIBLE_DOCKERHUB_VERSION}
+
+ARG PYWINRM_VERSION
+RUN pip install "pywinrm==${PYWINRM_VERSION}"
+
+ENTRYPOINT [ "ansible" ]
+CMD [ "--help" ]

@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  ansible:
+    image: leonyork/ansible:${IMAGE_TAG}
+    build:
+      context: .
+      args:
+        - "ANSIBLE_DOCKERHUB_VERSION=${ANSIBLE_DOCKERHUB_VERSION}"
+        - "PYWINRM_VERSION=${PYWINRM_VERSION}"
+        
