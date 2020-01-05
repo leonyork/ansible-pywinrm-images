@@ -1,5 +1,7 @@
 # Ansible Docker images
 
+[![Build Status](https://travis-ci.com/leonyork/ansible-pywinrm-images.svg?branch=master)](https://travis-ci.com/leonyork/ansible-pywinrm-images)
+
 Images for running [Ansible](https://www.ansible.com/) with [winpyrm](https://pypi.org/project/pywinrm/0.2.2/) installed. For instructions on using Ansible with Windows see [Ansible's Windows Guides](https://docs.ansible.com/ansible/latest/user_guide/windows.html)
 
 ## Build
