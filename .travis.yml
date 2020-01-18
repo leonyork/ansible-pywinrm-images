@@ -7,4 +7,4 @@ services:
   - docker
 install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - sh build.sh
+  - travis_retry sh build.sh
