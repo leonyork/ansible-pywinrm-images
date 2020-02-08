@@ -21,7 +21,7 @@ docker run leonyork/docker-tags leonyork/ansible \
         sh -c "docker run leonyork/pypi-releases pywinrm \
         | grep -E '^[0-9.]\.[0-9.]+$' \
         | tail -n $number_of_pywinrm_releases \
-        | xargs -I{PYWINRM_VERSION} -n1 sh build-image.sh {ANSIBLE} {PYWINRM_VERSION} {ANSIBLE}-pywinrm-{PYWINRM_VERSION} || exit 255" || exit 255
+        | xargs -I{PYWINRM_VERSION} -n1 sh build-image.sh {ANSIBLE} {PYWINRM_VERSION} {ANSIBLE}-pywinrm{PYWINRM_VERSION} || exit 255" || exit 255
 
 # Don't include release candidates (i.e. look for a version with numbers and dots)
 pywinrm_latest_version=`docker run leonyork/pypi-releases pywinrm | grep -E '^[0-9.]+$' | tail -n 1`
