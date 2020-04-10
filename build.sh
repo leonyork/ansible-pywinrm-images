@@ -15,7 +15,7 @@ number_of_pywinrm_releases=3
 # First gets the last $number_of_ansible_dockerhub_releases
 # For each of those tags gets the last $number_of_pywinrm_releases of non-release candidate versions of pywinrm and builds an image
 docker run leonyork/docker-tags leonyork/ansible \
-    | grep -E '^[0-9.]+\-alpine-[0-9.]+$' \
+    | grep -E '^[0-9.]+\-alpine[0-9.]+$' \
     | tail -n $number_of_ansible_dockerhub_releases \
     | xargs -I{ANSIBLE} -n1 \
         sh -c "docker run leonyork/pypi-releases pywinrm \
